@@ -29,9 +29,9 @@ func ClosestDistanceToC(note string) int {
 		}
 	}
 	if positions[0] < positions[1] {
-		return positions[0]
+		return -1 * positions[0]
 	} else if positions[1] < positions[0] {
-		return -1 * positions[1]
+		return positions[1]
 	}
 	return positions[0]
 }
