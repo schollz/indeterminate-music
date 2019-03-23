@@ -22,6 +22,10 @@ A given chord structure will locate snippets and transpose them to the correspon
 - [x] Add sustain: use triggerAttack instead of triggerAttackRelease when enabled
 - [ ] Add two midi channels to frontend (merge them in JSON)
 
+## Inspiration
+
+This project is inspired out what is possible with simple repetitive elements on the piano. I took a lot of inspriation from [Ólafur Arnalds](https://en.wikipedia.org/wiki/%C3%93lafur_Arnalds#re:member_(2018)), [Dan Tepfer](https://www.npr.org/2017/07/24/538677517/fascinating-algorithm-dan-tepfers-player-piano-is-his-composing-partner), and the minimal music style from [Philip Glass](https://en.wikipedia.org/wiki/Philip_Glass#1967%E2%80%931974:_Minimalism:_From_Strung_Out_to_Music_in_12_Parts).
+
 ## Credits
 
 Piano sounds from [University of Iowa](http://theremin.music.uiowa.edu/MISpiano.html). The first part of the silence is removed with ffmpeg.

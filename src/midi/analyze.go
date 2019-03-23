@@ -12,9 +12,13 @@ import (
 )
 
 type Phrase struct {
-	Filename   string
+	Filename string
+	// TotalNotes has the total number of notes
 	TotalNotes int
-	IsMinor    bool
+	// IsMinor indicates a C-minor key
+	IsMinor bool
+	// RH indicates whether it is a right-handed piece
+	RH bool
 }
 
 func Analyze(fnames []string) (phrases []Phrase, err error) {
@@ -46,6 +50,7 @@ func analyze(fname string) (p Phrase, err error) {
 	rd := smfreader.New(f)
 
 	var m midi.Message
+	noteSum := 0.0
 	for {
 		m, err = rd.Read()
 		if err != nil {
@@ -58,8 +63,11 @@ func analyze(fname string) (p Phrase, err error) {
 			if strings.Contains(utils.MidiToNote(v.Key()), "Eb") {
 				p.IsMinor = true
 			}
+			noteSum += float64(v.Key())
 		}
 	}
+
+	p.RH = noteSum/float64(p.TotalNotes) > 60
 
 	if err == smf.ErrFinished {
 		err = nil
