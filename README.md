@@ -17,7 +17,7 @@ A given chord structure will locate snippets and transpose them to the correspon
 
 - [ ] Interpolate loudness between pp, mf, and ff from velocity
 - [ ] Optional sparsity, to randomly leave out notes of snippet
-- [ ] Add sustain: use triggerAttack instead of triggerAttackRelease when enabled
+- [x] Add sustain: use triggerAttack instead of triggerAttackRelease when enabled
 - [ ] Add two midi channels to frontend (merge them in JSON)
 
 ## Credits
