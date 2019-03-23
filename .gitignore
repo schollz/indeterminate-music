@@ -4,7 +4,9 @@
 *.dll
 *.so
 *.dylib
-
+phrases/*
+src/midi/phrases/*
+song1.mid
 # Test binary, build with `go test -c`
 *.test
 
