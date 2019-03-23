@@ -19,12 +19,18 @@ type Phrase struct {
 
 func Analyze(fnames []string) (phrases []Phrase, err error) {
 	phrases = make([]Phrase, len(fnames))
-	for i, fname := range fnames {
+	i := 0
+	for _, fname := range fnames {
+		if strings.Contains(fname, ".tr") {
+			continue
+		}
 		phrases[i], err = analyze(fname)
 		if err != nil {
 			return
 		}
+		i++
 	}
+	phrases = phrases[:i]
 	return
 }
 

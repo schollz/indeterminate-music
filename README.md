@@ -15,6 +15,8 @@ A given chord structure will locate snippets and transpose them to the correspon
 
 ## To Do
 
+- [ ] Determine/filter on number of notes
+- [ ] Determine/filter whether its LH or RH
 - [ ] Interpolate loudness between pp, mf, and ff from velocity
 - [ ] Optional sparsity, to randomly leave out notes of snippet
 - [x] Add sustain: use triggerAttack instead of triggerAttackRelease when enabled

@@ -14,6 +14,7 @@ import (
 	"github.com/gomidi/midi/smf"
 	"github.com/gomidi/midi/smf/smfreader"
 	"github.com/gomidi/midi/smf/smfwriter"
+	"github.com/pkg/errors"
 )
 
 func Combine(fnames []string, finishedName string) (err error) {
@@ -52,7 +53,8 @@ func Combine(fnames []string, finishedName string) (err error) {
 func addMidi(fname string, wr *smf.Writer) (err error) {
 	f, err := os.Open(fname)
 	if err != nil {
-		panic(err)
+		err = errors.Wrap(err, "could not find '"+fname+"'")
+		return
 	}
 	defer f.Close()
 
