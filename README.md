@@ -1,6 +1,6 @@
 # musical-keyboard
 
-A musical keyboard, make music using MIDI and the browser.
+![Musical compositions](https://user-images.githubusercontent.com/6550035/54872482-b25bee80-4d81-11e9-9378-8b3d1414e649.jpg)
 
 
 ## Generative music
@@ -24,7 +24,7 @@ A given chord structure will locate snippets and transpose them to the correspon
 
 ## Inspiration
 
-This project is inspired out what is possible with simple repetitive elements on the piano. I took a lot of inspriation from [Ólafur Arnalds](https://en.wikipedia.org/wiki/%C3%93lafur_Arnalds#re:member_(2018)), [Dan Tepfer](https://www.npr.org/2017/07/24/538677517/fascinating-algorithm-dan-tepfers-player-piano-is-his-composing-partner), and the minimal music style from [Philip Glass](https://en.wikipedia.org/wiki/Philip_Glass#1967%E2%80%931974:_Minimalism:_From_Strung_Out_to_Music_in_12_Parts).
+This project is inspired out what is possible with simple repetitive elements on the piano. I took a lot of inspriation from [Ólafur Arnalds](https://en.wikipedia.org/wiki/%C3%93lafur_Arnalds#re:member_(2018)), [Dan Tepfer](https://www.npr.org/2017/07/24/538677517/fascinating-algorithm-dan-tepfers-player-piano-is-his-composing-partner), the minimal music style from [Philip Glass](https://en.wikipedia.org/wiki/Philip_Glass#1967%E2%80%931974:_Minimalism:_From_Strung_Out_to_Music_in_12_Parts), and the experimental compositioning by [Christian Wolff](http://www.paristransatlantic.com/magazine/interviews/wolff.html).
 
 ## Credits
 
