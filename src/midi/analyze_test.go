@@ -14,3 +14,9 @@ func TestAnalyze(t *testing.T) {
 	assert.Nil(t, err)
 	fmt.Println(ps)
 }
+
+func Test1(t *testing.T) {
+	ps, err := Analyze([]string{"phrases/phrase8.mid"})
+	assert.Nil(t, err)
+	fmt.Println(ps)
+}

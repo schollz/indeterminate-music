@@ -41,28 +41,52 @@ func TestCombine(t *testing.T) {
 	fmt.Println(phraseList)
 	err = Combine(phraseList, "songLH.mid")
 
+	rh := true
 	phraseList = []string{
-		GetRandomPhrase(phrases, "E", true, true, 0, 40),
-		GetRandomPhrase(phrases, "E", true, true, 0, 40),
-		GetRandomPhrase(phrases, "G", false, true, 0, 40),
-		GetRandomPhrase(phrases, "G", false, true, 0, 40),
-		GetRandomPhrase(phrases, "A", true, true, 0, 44),
-		GetRandomPhrase(phrases, "A", true, true, 0, 44),
-		GetRandomPhrase(phrases, "C", false, true, 0, 40),
-		GetRandomPhrase(phrases, "C", false, true, 0, 40),
+		GetRandomPhrase(phrases, "E", true, rh, 0, 3),
+		GetRandomPhrase(phrases, "E", true, rh, 0, 3),
+		GetRandomPhrase(phrases, "C", false, rh, 0, 4),
+		GetRandomPhrase(phrases, "B", true, rh, 0, 4),
+
+		GetRandomPhrase(phrases, "E", true, rh, 0, 4),
+		GetRandomPhrase(phrases, "E", true, rh, 0, 4),
+		GetRandomPhrase(phrases, "C", false, rh, 0, 4),
+		GetRandomPhrase(phrases, "B", true, rh, 0, 4),
+
+		GetRandomPhrase(phrases, "E", true, rh, 3, 10),
+		GetRandomPhrase(phrases, "E", true, rh, 3, 10),
+		GetRandomPhrase(phrases, "C", false, rh, 3, 10),
+		GetRandomPhrase(phrases, "B", true, rh, 3, 10),
+
+		GetRandomPhrase(phrases, "E", true, rh, 10, 40),
+		GetRandomPhrase(phrases, "E", true, rh, 10, 40),
+		GetRandomPhrase(phrases, "C", false, rh, 10, 40),
+		GetRandomPhrase(phrases, "B", true, rh, 10, 40),
 	}
 	fmt.Println(phraseList)
 	err = Combine(phraseList, "songRH.mid")
 	assert.Nil(t, err)
+	rh = false
 	phraseList = []string{
-		GetRandomPhrase(phrases, "E", true, false, 0, 40),
-		GetRandomPhrase(phrases, "E", true, false, 0, 40),
-		GetRandomPhrase(phrases, "G", false, false, 0, 40),
-		GetRandomPhrase(phrases, "G", false, false, 0, 40),
-		GetRandomPhrase(phrases, "A", true, false, 0, 44),
-		GetRandomPhrase(phrases, "A", true, false, 0, 44),
-		GetRandomPhrase(phrases, "C", false, false, 0, 40),
-		GetRandomPhrase(phrases, "C", false, false, 0, 40),
+		GetRandomPhrase(phrases, "E", true, rh, 0, 4),
+		GetRandomPhrase(phrases, "E", true, rh, 0, 4),
+		GetRandomPhrase(phrases, "C", false, rh, 0, 4),
+		GetRandomPhrase(phrases, "B", true, rh, 0, 4),
+
+		GetRandomPhrase(phrases, "E", true, rh, 0, 4),
+		GetRandomPhrase(phrases, "E", true, rh, 0, 4),
+		GetRandomPhrase(phrases, "C", false, rh, 0, 4),
+		GetRandomPhrase(phrases, "B", true, rh, 0, 4),
+
+		GetRandomPhrase(phrases, "E", true, rh, 0, 4),
+		GetRandomPhrase(phrases, "E", true, rh, 0, 4),
+		GetRandomPhrase(phrases, "C", false, rh, 0, 4),
+		GetRandomPhrase(phrases, "B", true, rh, 0, 4),
+
+		GetRandomPhrase(phrases, "E", true, rh, 0, 4),
+		GetRandomPhrase(phrases, "E", true, rh, 0, 4),
+		GetRandomPhrase(phrases, "C", false, rh, 0, 4),
+		GetRandomPhrase(phrases, "B", true, rh, 0, 4),
 	}
 	fmt.Println(phraseList)
 	err = Combine(phraseList, "songLH.mid")

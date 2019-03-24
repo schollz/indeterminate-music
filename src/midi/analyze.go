@@ -60,6 +60,7 @@ func analyze(fname string) (p Phrase, err error) {
 		switch v := m.(type) {
 		case channel.NoteOn:
 			p.TotalNotes++
+			log.Debug(utils.MidiToNote(v.Key()))
 			if strings.Contains(utils.MidiToNote(v.Key()), "Eb") {
 				p.IsMinor = true
 			}
