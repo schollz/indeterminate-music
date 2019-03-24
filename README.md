@@ -31,8 +31,9 @@ These characteristics are then used to arrange them into a song according to the
 ## To Do
 
 - [ ] Add getting started section
-- [ ] Determine/filter on number of notes
-- [ ] Determine/filter whether its LH or RH
+- [x] Determine/filter on number of notes
+- [x] Determine/filter whether its LH or RH
+- [ ] Build midi tracks in half-time (for holding notes)
 - [ ] Interpolate loudness between pp, mf, and ff from velocity
 - [ ] Optional sparsity, to randomly leave out notes of snippet
 - [x] Add sustain: use triggerAttack instead of triggerAttackRelease when enabled
