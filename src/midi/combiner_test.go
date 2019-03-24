@@ -40,6 +40,32 @@ func TestCombine(t *testing.T) {
 	}
 	fmt.Println(phraseList)
 	err = Combine(phraseList, "songLH.mid")
+
+	phraseList = []string{
+		GetRandomPhrase(phrases, "E", true, true, 0, 40),
+		GetRandomPhrase(phrases, "E", true, true, 0, 40),
+		GetRandomPhrase(phrases, "G", false, true, 0, 40),
+		GetRandomPhrase(phrases, "G", false, true, 0, 40),
+		GetRandomPhrase(phrases, "A", true, true, 0, 44),
+		GetRandomPhrase(phrases, "A", true, true, 0, 44),
+		GetRandomPhrase(phrases, "C", false, true, 0, 40),
+		GetRandomPhrase(phrases, "C", false, true, 0, 40),
+	}
+	fmt.Println(phraseList)
+	err = Combine(phraseList, "songRH.mid")
+	assert.Nil(t, err)
+	phraseList = []string{
+		GetRandomPhrase(phrases, "E", true, false, 0, 40),
+		GetRandomPhrase(phrases, "E", true, false, 0, 40),
+		GetRandomPhrase(phrases, "G", false, false, 0, 40),
+		GetRandomPhrase(phrases, "G", false, false, 0, 40),
+		GetRandomPhrase(phrases, "A", true, false, 0, 44),
+		GetRandomPhrase(phrases, "A", true, false, 0, 44),
+		GetRandomPhrase(phrases, "C", false, false, 0, 40),
+		GetRandomPhrase(phrases, "C", false, false, 0, 40),
+	}
+	fmt.Println(phraseList)
+	err = Combine(phraseList, "songLH.mid")
 	assert.Nil(t, err)
 }
 
