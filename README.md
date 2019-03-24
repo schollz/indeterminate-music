@@ -15,7 +15,8 @@ This project is basically a framework for developing indeterminate music. This p
 
 Examples (generated based on current commit):
 
-- https://soundcloud.com/schollz/b325dca47b2938c01b0689596047155550b8d527 ([b325dca4](https://github.com/schollz/indeterminate-music/commit/b325dca47b2938c01b0689596047155550b8d527))
+- https://soundcloud.com/schollz/b325dca47b2938c01b0689596047155550b8d527 ([b325dca](https://github.com/schollz/indeterminate-music/commit/b325dca47b2938c01b0689596047155550b8d527))
+- https://soundcloud.com/schollz/8b0ba2769854009963e4ade90deaf964e3c6fd14 ([8b0ba27](https://github.com/schollz/indeterminate-music/commit/8b0ba2769854009963e4ade90deaf964e3c6fd14))
 
 ## How it works
 
