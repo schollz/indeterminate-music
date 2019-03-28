@@ -120,38 +120,53 @@ if not os.path.isfile('data/all_chords.json'):
 all_chords = json.load(open('data/all_chords.json', 'r'))
 
 
-midi_data = pretty_midi.PrettyMIDI('testing/songLH.mid')
+midi_data = pretty_midi.PrettyMIDI('testing/toto-africa.mid')
 time_per_measure = 0
 downbeats = midi_data.get_downbeats()
 print(downbeats)
 
+downbeatsHalf = []
+for i,downbeat in enumerate(downbeats):
+    if i==0:
+        downbeatsHalf.append(downbeat)
+        continue 
+    downbeatsHalf.append((downbeat-downbeats[i-1])/2+downbeats[i-1])
+    downbeatsHalf.append(downbeat)
+downbeats = downbeatsHalf
+    
     
 
 for instrument_i,instrument in enumerate(midi_data.instruments):
     if instrument.is_drum:
         continue
     measures = [[]]*len(downbeats)
-    for i,_ in enumerate(downbeats):
-        if i ==0:
-            continue
-        for note in instrument.notes:
-            if note.start+0.00001 >= downbeats[i-1] and note.start+0.00001 <= downbeats[i] and note.end-0.00001 >= downbeats[i-1] and note.end-0.00001 <= downbeats[i]:
-                print(note,downbeats[i-1],downbeats[i])
+    
+    # add a note for each measure that it is played
+    for note in instrument.notes:
+        noteStart = note.start +0.0001
+        noteEnd = note.end - 0.001
+        for i,_ in enumerate(downbeats):
+            if i ==0:
+                continue
+            if noteStart < downbeats[i]:
                 if len(measures[i-1]) == 0:
                     measures[i-1] = []
                 measures[i-1].append(note)
-            
+            if noteEnd < downbeats[i]:
+                break
 
-    print(measures[0])
     chords = []
     for i,measure in enumerate(measures):
         notes = []
         for note in measure:
             notes.append(midi_to_note(note.pitch))
         if len(notes) > 1:
-            print(notes)
             chords.append(notes_to_chord(notes).ljust(5))
         else:
             chords.append("     ")
     print(str(instrument_i) + ": " + " ".join(chords))
-    break
+
+times = []
+for _, downbeat in enumerate(downbeats):
+    times.append("{:2.1f}".format(downbeat).ljust(5))
+print("t: " + " ".join(times))
